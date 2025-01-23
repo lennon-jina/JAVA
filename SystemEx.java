@@ -18,14 +18,22 @@ public class SystemEx {
 		 */
 		
 		Scanner scan = new Scanner(System.in);
-		System.out.println();
 		System.out.println("이름:나이를 입력하세요=");
-		String userInput = scan.nextLine();
-		System.out.println(userInput);
-		System.out.println(userInput.substring(0,2));
-		System.out.println(userInput.substring(3));
+		String userString = scan.nextLine();
+		System.out.println("===1번 문제===");
+		int idx = userString.indexOf(":");
+		System.out.println(idx);
+		System.out.println(userString.substring(0, idx));
+		System.out.println(userString.substring(idx+1));
 		
-		System.out.println("입력하신 이름은: " + userInput.substring(0,2) + " 나이는: " + userInput.substring(3));
+		// 변수에 담기
+		String nm = userString.substring(0, idx);
+		String age = userString.substring(idx+1);   // 얘는 문자열
+		// 콘솔 입력은 String 타입
+		// 숫자 형태로 사용하려면 casting 형변환 해야함.
+		int userAge = Integer.parseInt(age);   // 얘는 숫자열
+		System.out.println("입력하신 이름은:" + nm + " 나이는:" + age);
+		System.out.println("입력하신 이름은:" + nm + " 나이는:" + userAge);
 
 	}
 
