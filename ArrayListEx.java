@@ -1,6 +1,5 @@
 package ch08_collection;
 
-import java.io.ObjectInputStream.GetField;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
